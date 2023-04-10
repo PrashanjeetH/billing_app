@@ -1,0 +1,25 @@
+{% extends 'UiApp/base.html'%}
+
+{% block startcss %}
+
+{% endblock %}
+
+{% block startscript %}
+
+{% endblock %}
+
+
+{% block content %}
+    {{body}}
+    <form action="{% url 'login' %}" method="post">
+        {% csrf_token %}
+        <input type="text" name="username" id=""/>
+        <input type="password" name="password" id=""/>
+        <input type="password" name="password2" id=""/>
+        <button type="submit">submit</button>
+    </form>
+    {{data}}
+{% endblock %}
+
+{% block endscript %}
+{% endblock %}
